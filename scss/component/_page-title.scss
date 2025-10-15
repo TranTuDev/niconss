@@ -1,0 +1,41 @@
+@use "../abstracts/index" as *;
+.tf-title-page {
+  position: sticky;
+  margin-top: -100px;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url("../../images/header/bg.png") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title {
+  color: var(--primary);
+}
+
+.eadcumb-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+  color: var(--primary);
+}
+
+.eadcumb-list a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.eadcumb-list a:hover {
+  color: var(--primary);
+}
+.eadcumb-list p{
+    padding-top: 1rem;
+}
+

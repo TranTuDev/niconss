@@ -1,0 +1,47 @@
+$font-main: "DM Sans", sans-serif;
+$font-2: "Play", sans-serif;
+
+
+
+$fontIcon: "icomoon";
+
+
+:root {
+  //bg color
+  --primary: #ffffff;
+  --primary-1: #000000;
+  --primary-2:#B80000;
+
+  --dark: #181818;
+  --dark-1: #120202;
+  --dark-2: #1A1A1A;
+  --dark-3: #1B1B1B;
+  --dark-4: #06080E;
+  --dark-5: #292727;
+  --dark-6: #3A3A3C;
+  --dark-7: #4A4A4A;
+  --dark-8: #696866;
+  --dark-9: #817F7E;
+  --dark-10: #7A7F86;
+  --dark-11: #7A7F86; 
+  --dark-12: #86898E;
+  --dark-13: #A8B0BB;
+ 
+  --white: #EDEDED;
+  --white-1: #F5F5F5;
+  --white-2: #E0E0E0;
+  --white-3: #D9D9D9;
+  --white-4: #D1D1D1;
+  // rgba color
+  --rgba-dark: rgba(27, 27, 27, 0.8);
+  --rgba-dark-1: rgba(27, 27, 27, 0.13);
+  --rgba-dark-2: rgba(24, 24, 22, 0.5882);
+  --rgba-dark-3: rgba(0, 0, 0, 0.2);
+  --rgba-dark-4: rgba(0, 0, 0, 0.08);
+  --rgba-dark-5: rgba(250, 246, 246, 0.1);
+  --rgba-dark-6:rgba(242, 242, 242, 0.18);
+  --rgba-dark-7: rgba(250, 246, 246, 0.4);
+  --rgba-white: rgba(255, 255, 255, 0.8);
+  //different
+  --yellow: #FFB11B;
+}

@@ -1,0 +1,128 @@
+@use "../abstracts/index" as *;
+
+.footer-default {
+    background-color: var(--primary-1);
+    color: var(--primary);
+}
+
+.footer-col-block {
+    // justify-content: start;
+    // align-items: start;
+
+}
+
+
+.tf-socical-icon {
+    display: flex;
+    gap: 20px;
+    padding-left: 0rem;
+
+    a {
+        border: 1px solid var(--primary);
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: var(--primary);
+        border-radius: 50px;
+        @include transition5();
+
+        &:hover {
+            background-color: var(--primary-2);
+            color: var(--primary);
+        }
+    }
+
+}
+
+.footer-inner-wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-menu-list {
+    padding-left: 0rem;
+
+    a {
+        text-decoration: none;
+        color: var(--primary);
+    }
+}
+
+.item {
+    display: flex;
+    gap: 10px;
+
+    a {
+        text-decoration: none;
+        color: var(--primary);
+    }
+}
+
+.tf-collapse-content ul {
+    padding-left: 0rem;
+}
+
+.pick {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+
+    p {
+        margin-bottom: 0rem;
+    }
+}
+
+
+.tele {
+    display: flex;
+    border-bottom: 1px solid red;
+    gap: 80px;
+
+    a {
+        justify-content: end;
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid red;
+}
+
+.footer-bottom-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 32px 0px;
+    position: relative;
+    gap: 15px;
+}
+
+.text {
+    display: flex;
+    gap: 10px;
+
+    span {
+        height: 5px;
+        width: 5px;
+        border-radius: 50px;
+        background-color: var(--dark-12);
+        margin-top: 5px;
+    }
+}
+
+.text-line {
+    display: flex;
+    gap: 5px;
+
+    span {
+        color: var(--primary-2);
+    }
+}
+
+.footer-bottom {
+    align-items: center;
+}

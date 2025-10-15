@@ -1,0 +1,118 @@
+@use "../abstracts/index" as *;
+
+.s-blog-grid {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.blog-item {
+    display: grid;
+    gap: 24px;
+    
+}
+
+.blog-content ul {
+    padding-left: 0 !important;
+    display: flex;
+}
+
+.blog-item .entry_image {
+    overflow: hidden;
+}
+
+.blog-item .entry_image a {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+}
+
+.blog-item .entry_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.entry_title a {
+    text-decoration: none;
+    color: var(--primary-1);
+}
+
+.entry_title a:hover {
+    color: var(--primary-1);
+}
+
+.entry_sub {
+    color: var(--dark-10);
+}
+
+.entry_comment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry_comment a {
+
+    text-decoration: none;
+    color: var(--dark-10);
+}
+
+.entry_comment a:hover {
+    color: var(--dark-10);
+}
+
+.entry_date {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-10);
+}
+
+.br-line i {
+    padding-top: 22px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5px;
+    color: var(--dark-10);
+}
+
+.wg-pagination {
+    // background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 0rem;
+
+}
+
+.pagination-item {
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.wg-pagination a {
+    text-decoration: none;
+    color: var(--primary-1);
+}
+
+.active {
+    background-color: var(--primary-2);
+    border-radius: 5px;
+}
+
+.active a {
+    color: var(--white);
+}

@@ -1,0 +1,74 @@
+.tf-bottombar {
+    background-color: var(--primary-1);
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+
+}
+/* ánh sáng mờ bao quanh */
+.tf-bottombar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15), transparent 70%);
+    filter: blur(30px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+}
+
+.marquee-inner {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+    gap: 20px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    background-size: 200% auto;
+    animation:
+        scroll 25s linear infinite,
+        shine 3.5s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+}
+
+.marquee:hover .marquee-inner {
+    animation-play-state: paused;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.marquee-child-item img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    
+    transition: all 0.4s ease;
+}
+
+/* Hover phát sáng mạnh */
+.marquee-child-item img:hover {
+  filter: drop-shadow(0 0 20px rgb(5, 184, 239)) brightness(1.6);
+  transform: scale(1.1);
+}
+
+/* Animation vô tận */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Ánh sáng quét ngang */
+@keyframes shine {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}

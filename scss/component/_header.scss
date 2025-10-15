@@ -1,0 +1,174 @@
+@use "../abstracts/index" as *;
+
+.header-default {
+  border-bottom: 1px solid var(--rgba-dark-1);
+
+  .wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .box-nav-menu {
+    gap: 20px;
+    @include flex(center, center);
+
+    .item-link {
+      font-size: 18px;
+      line-height: 100%;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      @include transition3;
+      position: relative;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .menu-item {
+      padding: 35px 20px 35px 20px;
+      border: 1px solid (--primary-2);
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: var(--rgba-dark-7);
+        border-bottom: 1px solid var(--primary-2);
+        text-decoration: underline;
+      }
+
+      &:hover a {
+
+        text-decoration: underline;
+
+      }
+    }
+  }
+
+  .nav-icon {
+    gap: 30px !important;
+    margin-bottom: 0rem
+  }
+
+  .nav-search a {
+    text-decoration: none;
+    color: var(--primary);
+  }
+
+  .nav-toggle {
+    padding: 30px 30px;
+    background-color: var(--primary-2);
+
+    a {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    i {
+
+      color: var(--primary);
+    }
+  }
+
+  .nav-toggle .icon-icon-toggle {
+    font-size: 30px;
+  }
+
+  .logo-header {
+    padding-left: 20px;
+    align-items: center;
+    display: flex;
+  }
+
+}
+
+header {
+  position: sticky;
+  left: 0;
+  right: 0;
+  z-index: 888;
+  position: -webkit-sticky;
+  // background-color: var(--rgba-dark);
+  -webkit-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  font-family: $font-2;
+  top: 0;
+
+  &.header-bg {
+    background-color: var(--rgba-dark);
+  }
+}
+
+// .box-nav-menu ul.wrapper-sub-menu {
+//   position: absolute;
+//   background-color: var(--primary);
+//   padding: 15px 15px;
+//   list-style: none;
+//   width: auto;
+//   height: auto;
+// }
+
+// .box-nav-menu ul.wrapper-sub-menu a {
+//   padding: 8px 15px;
+// }
+
+/* ===== MENU CẤP 2 ===== */
+.box-nav-menu .sub-menu {
+  pointer-events: none;
+  position: absolute;
+  background-color: var(--primary);
+  z-index: 999;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 15px;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  padding: 20px;
+  width: 200px;
+}
+
+.box-nav-menu .menu-item:hover>.sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ===== MENU CẤP 3 ===== */
+.sub-menu .menu-list {
+  position: relative;
+}
+
+/* menu cấp 3 ẩn */
+.sub-menu .menu-list li .sub-menu-1 {
+  pointer-events: none;
+  position: absolute;
+  background-color: var(--primary);
+  z-index: 999;
+  text-align: left;
+  top: 0;
+  left: 110%;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 15px;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  padding: 20px;
+  width: 200px;
+}
+
+/* hiện menu cấp 3 khi hover vào li cha */
+.sub-menu .menu-list li:hover>.sub-menu-1 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: auto;
+}

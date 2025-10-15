@@ -1,0 +1,133 @@
+@use "../abstracts/index" as *;
+
+/* ==================== MOBILE MENU ==================== */
+
+// .canvas-mb {
+//     width: 100% !important;
+//     max-width: min(90%, 320px);
+//     border-right: 0 !important;
+//     font-family: "Poppins", sans-serif;
+// }
+// .offcanvas{
+//   width: ;
+// }
+
+.offcanvas-end{
+  width: 70% !important;
+  height: 100%;
+}
+.mb-canvas-content {
+  padding: 1rem;
+}
+
+.mav-ul-mb {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-mb-item {
+  border-bottom: 1px solid var(--dark-10);
+  position: relative;
+}
+
+.mb-menu-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary-1);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: var(--primary-2);
+  }
+}
+
+
+.mb-menu-link::after {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.nav-mb-item.open>.mb-menu-link::after {
+  transform: rotate(180deg);
+}
+
+/* ========== SUB MENU ========== */
+.sub-nav-menu {
+  list-style: none;
+  padding-left: 10px;
+  margin: 0;
+  display: none;
+}
+
+.sub-nav-link {
+  display: block;
+  padding: 8px 0;
+  color: var(--primary-1);
+  // font-size: 15px;
+  text-decoration: none;
+  font-family: $font-main;
+
+  &:hover {
+    color: var(--yellow);
+  }
+}
+
+// /* hiệu ứng trượt */
+.sub-nav-menu.show {
+  display: block;
+  animation: slideDown 0.25s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+/* ẨN NÚT MOBILE MENU MẶC ĐỊNH */
+#mobileMenu .btn.btn-primary {
+  display: none;
+}
+
+/* ----------- DESKTOP (≥992px) ----------- */
+@media (min-width: 992px) {
+  /* Ẩn nút mobile menu */
+  #mobileMenu .btn.btn-primary {
+    display: none;
+  }
+  /* Hiện toggle trong nav chính */
+  .nav-toggle {
+    display: block !important;
+  }
+}
+
+/* ----------- MOBILE (≤991px) ----------- */
+@media (max-width: 991px) {
+  /* Ẩn toggle trong nav chính */
+  .nav-toggle {
+    display: none !important;
+  }
+
+  /* Hiện nút mobile menu */
+  #mobileMenu .btn.btn-primary {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent; /* theo thiết kế nếu muốn icon trần */
+    font-size: 22px;
+  }
+
+  /* Giữ lại nav-search */
+  .nav-search {
+    display: inline-block !important;
+  }
+}
