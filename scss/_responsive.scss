@@ -12,6 +12,8 @@
   }
 }
 
+
+
 @media (min-width: 992px) and (max-width: 1200px) {
   .sb-contact {
     padding: 30px 15px;
@@ -384,8 +386,6 @@
   .modal-newsletter.style-row .modal-content {
     flex-direction: row;
   }
-
-
 
   .list-color-product {
     gap: 5px;
@@ -1278,6 +1278,12 @@
       }
     }
   }
+
+  // .pagination-item {
+  //   width: 30px;
+  //   height: 20px;
+  //   font-size: 14px;
+  // }
 
   .footer-bottom-wrap {
     .box-right {
@@ -2213,31 +2219,34 @@
   .row-footer {
     display: flex;
     gap: 0;
+    width: 100%;
+    height: auto;
 
     .s1 {
-      width: 29%;
-      padding: 60px 24px;
+      width: 25%;
+      padding: 85px 30px;
       padding-left: 0;
-      border-right: 1px solid var(--line);
+      // border-right: 1px solid var(--line);
     }
 
     .s2 {
-      width: 30%;
-      padding: 60px 30px;
-      border-right: 1px solid var(--line);
+      width: 25%;
+      padding: 85px 30px;
+      // border-right: 1px solid var(--line);
     }
 
     .s3 {
-      width: 30%;
-      padding: 60px 30px;
-      border-right: 1px solid var(--line);
+      width: 25%;
+      ;
+      padding: 85px 30px;
+      // border-right: 1px solid var(--line);
     }
 
     .s4 {
-      width: 29%;
+      width: 25%;
       display: flex;
       justify-content: space-between;
-      padding: 60px 24px;
+      padding: 85px 30px;
       padding-right: 0;
     }
   }
@@ -4068,9 +4077,9 @@
   }
 
   .row-footer {
-    .s2 {
-      padding: 60px 74px 60px 80px;
-    }
+    // .s2 {
+    //   padding: 60px 74px 60px 80px;
+    // }
 
     .s3 {
       padding: 60px 80px;

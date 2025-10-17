@@ -2,20 +2,14 @@
 
 .header-default {
   border-bottom: 1px solid var(--rgba-dark-1);
+  overflow: hidden;
 
-  .wrapper-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 
   .box-nav-menu {
     gap: 20px;
     @include flex(center, center);
 
     .item-link {
-      font-size: 18px;
-      line-height: 100%;
       font-weight: 500;
       display: flex;
       align-items: center;
@@ -24,13 +18,15 @@
       position: relative;
       color: var(--primary);
       text-decoration: none;
+
+      white-space: nowrap;
     }
 
     .menu-item {
-      padding: 35px 20px 35px 20px;
-      border: 1px solid (--primary-2);
+      padding: 33px 20px;
       justify-content: center;
       align-items: center;
+      
 
       &:hover {
         background-color: var(--rgba-dark-7);
@@ -41,14 +37,50 @@
       &:hover a {
 
         text-decoration: underline;
-
       }
     }
   }
 
   .nav-icon {
     gap: 30px !important;
-    margin-bottom: 0rem
+    margin-bottom: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff;
+        transition: 0.3s ease;
+
+        i {
+          font-size: 22px;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .btn {
+        padding: 8px 12px;
+        border-radius: 6px;
+        background-color: #007bff; // hoặc màu chính của theme
+
+        i {
+          font-size: 20px;
+          color: #fff;
+        }
+      }
+    }
   }
 
   .nav-search a {
@@ -57,8 +89,9 @@
   }
 
   .nav-toggle {
-    padding: 30px 30px;
+    padding: 28px 28px;
     background-color: var(--primary-2);
+
 
     a {
       text-decoration: none;
@@ -69,7 +102,6 @@
     }
 
     i {
-
       color: var(--primary);
     }
   }
@@ -79,11 +111,14 @@
   }
 
   .logo-header {
-    padding-left: 20px;
+    padding: 20px 20px;
     align-items: center;
     display: flex;
   }
 
+}
+.btn{
+  background-color: non;
 }
 
 header {
@@ -104,18 +139,6 @@ header {
   }
 }
 
-// .box-nav-menu ul.wrapper-sub-menu {
-//   position: absolute;
-//   background-color: var(--primary);
-//   padding: 15px 15px;
-//   list-style: none;
-//   width: auto;
-//   height: auto;
-// }
-
-// .box-nav-menu ul.wrapper-sub-menu a {
-//   padding: 8px 15px;
-// }
 
 /* ===== MENU CẤP 2 ===== */
 .box-nav-menu .sub-menu {
@@ -171,4 +194,40 @@ header {
   visibility: visible;
   transform: translateX(0);
   pointer-events: auto;
+}
+
+.nav-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+
+  li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .btn {
+    background-color: var(--primary-2);
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    i {
+      color: #fff;
+      font-size: 22px;
+    }
+  }
 }

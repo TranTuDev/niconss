@@ -1,30 +1,38 @@
 @use "../abstracts/index" as *;
 
 .s-blog-grid {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 135px;
+    padding-bottom: 195px;
+    margin-bottom: -60px;
 }
 
 .blog-item {
     display: grid;
     gap: 24px;
-    
-}
+    margin-bottom: 60px;
 
-.blog-content ul {
-    padding-left: 0 !important;
-    display: flex;
+    .blog-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    ul {
+        padding-left: 0 !important;
+        display: flex;
+    }
 }
 
 .blog-item .entry_image {
+    position: relative;
     overflow: hidden;
+    cursor: none;
 }
 
 .blog-item .entry_image a {
     display: block;
     height: 100%;
     width: 100%;
-
 }
 
 .blog-item .entry_image img {
@@ -34,85 +42,168 @@
     display: block;
 }
 
+
+
+
+// .entry_image:hover{
+//     width: 30px;
+//     height: 30px;
+//     background-color: var(--primary-2);
+
+// }
+
 .entry_title a {
     text-decoration: none;
-    color: var(--primary-1);
-}
+    color: var(--dark-3);
+    font-weight: bold;
 
-.entry_title a:hover {
-    color: var(--primary-1);
+    &:hover {
+        color: var(--primary-2);
+
+    }
 }
 
 .entry_sub {
-    color: var(--dark-10);
+    color: var(--dark-3);
+
 }
 
-.entry_comment {
+
+
+
+.entry-meta {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.entry_comment a {
-
-    text-decoration: none;
-    color: var(--dark-10);
-}
-
-.entry_comment a:hover {
-    color: var(--dark-10);
-}
-
-.entry_date {
-    padding-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--dark-10);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    p {
+        color: var(--dark-3);
+    }
+   
+    li {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .br-line i {
-    padding-top: 22px;
-    padding-left: 5px;
-    padding-right: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 5px;
-    color: var(--dark-10);
+    color: var(--dark-12);
+}
+
+.entry_comment a {
+    text-decoration: none;
+    color: var(--dark-3);
+
+    &:hover {
+        color: var(--primary-2);
+    }
 }
 
 .wg-pagination {
-    // background-color: aqua;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding-left: 0rem;
+    // padding-left: 0rem;
+
+    a {
+        text-decoration: none;
+        color: var(--primary-1);
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
 
 }
 
 .pagination-item {
     border: 1px solid var(--white);
     border-radius: 5px;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 
+
+    &:hover {
+        background-color: var(--primary-2);
+        border: 1px solid var(--primary-2)
+    }
+
 }
 
-.wg-pagination a {
-    text-decoration: none;
-    color: var(--primary-1);
+@media (max-width: 991px) {
+    .pagination-item {
+        width: 50px;
+        height: 40px;
+        font-size: 14px;
+    }
 }
 
-.active {
+.wg-pagination .active {
     background-color: var(--primary-2);
     border-radius: 5px;
+
 }
 
 .active a {
     color: var(--white);
+    border: none;
 }
+
+//////
+/// 
+.entry_image {
+    position: relative;
+    cursor: none;
+    overflow: hidden;
+}
+
+/* Cục tròn màu đỏ */
+.entry_image .custom-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: rgba(200, 20, 20, 1);
+    transform: translate(-50%, -50%) scale(0.8);
+    pointer-events: none;
+    transition: all 0.2s ease;
+    opacity: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry_image.cursor-visible .custom-cursor {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Hai icon trong cục tròn */
+.cursor-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.cursor-icons i {
+    color: #fff;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+/* Animation nhẹ khi nhấn */
+.entry_image.cursor-large .custom-cursor {
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+/// 
+/// 

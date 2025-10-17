@@ -984,7 +984,7 @@ a {
   padding: 0;
   @include flex(center, center);
   @include transition3;
-  &.show {
+  &.showw {
     opacity: 1;
     visibility: visible;
   }
@@ -1294,7 +1294,7 @@ a {
     z-index: 1;
     @include transition3;
   }
-  &.show {
+  &.showw {
     opacity: 1;
     visibility: visible;
   }

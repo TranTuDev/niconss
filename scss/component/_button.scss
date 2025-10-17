@@ -1,0 +1,15 @@
+@use "../abstracts/index" as *;
+.showw{
+    background-color: var(--rgba-dark-7);
+    border:1px solid var(--rgba-dark) !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.iconn {
+    transform: rotate(-90deg)
+    
+}
+.btn-mobile{
+    padding-right:20px ;
+}

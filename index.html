@@ -7,6 +7,10 @@
   <title>Tiltle</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
   <link rel="stylesheet" href="fonts/fonts-icons.css">
   <link rel="stylesheet" href="fonts/fonts.css">
 
@@ -21,42 +25,41 @@
   <div class="wrapper">
     <!-- header -->
     <header id="header" class="header-default" style="top: unset;">
-
-      <div class="wrapper-header align-items-center">
-        <!-- nội dung -->
-        <div class="col-lg-2 col-md-4 col-6">
-          <a href="#" class="logo-header ">
+      <div class="row wrapper-header align-items-center">
+        <!-- Logo -->
+        <div class="col-6 col-sm-6 col-md-6 col-lg-2">
+          <a href="#" class="logo-header">
             <img src="./images/header/logo.svg" alt="">
           </a>
         </div>
+
+        <!-- Menu chính -->
         <div class="col-lg-8 d-none d-lg-block">
           <nav class="box-navigation text-center">
-            <ul class="box-nav-menu list-unstyled mb-0 d-flex justify-content-center ">
+            <ul class="box-nav-menu list-unstyled mb-0 d-flex justify-content-center">
               <li class="menu-item">
-                <a href="#" class="item-link">Home </a>
-              </li>
-
-              <li class="menu-item">
-                <a href="#" class="item-link">About Us</a>
-                <div class=""></div>
+                <a href="#" class="item-link text-lg">Home</a>
               </li>
               <li class="menu-item">
-                <a href="#" class="item-link">Pages</a>
-                <div class=""></div>
+                <a href="#" class="item-link text-lg">About Us</a>
               </li>
               <li class="menu-item">
-                <a href="#" class="item-link">Services</a>
-                <div class=""></div>
+                <a href="#" class="item-link text-lg">Pages</a>
               </li>
+              <li class="menu-item">
+                <a href="#" class="item-link text-lg">Services</a>
+              </li>
+              <!-- Menu có sub-menu -->
               <li class="menu-item position-relative">
-                <a href="#" class="item-link">Blog</a>
-                <div class="sub-menu sub-menu-style-3">
+                <a href="#" class="item-link text-lg">Blog</a>
+                <!-- <div class="sub-menu sub-menu-style-3">
                   <ul class="menu-list">
                     <li>
-                      <div class="menu-heading ">Blogs</div>
+                      <div class="menu-heading">Blogs</div>
                     </li>
                     <li><a href="#">Blogs List 1</a></li>
-                    <li><a href="#">Blogs List 2</a>
+                    <li>
+                      <a href="#">Blogs List 2</a>
                       <div class="sub-menu-1">
                         <ul class="menu-list-1">
                           <li><a href="">cmm</a></li>
@@ -69,40 +72,42 @@
                     <li><a href="#">Blogs Grid 2</a></li>
                     <li><a href="#">Single Blogs</a></li>
                   </ul>
-                </div>
-              </li>
-              <li class="menu-item position-relative">
-                <a href="#" class="item-link">Contact Us</a>
+                </div> -->
               </li>
 
-
+              <li class="menu-item">
+                <a href="#" class="item-link text-lg">Contact Us</a>
+              </li>
             </ul>
           </nav>
         </div>
-        <div class="col-lg-2 col-md-4 col-4">
-          <ul class="nav-icon d-flex justify-content-end align-items-center  ">
-            <li class="nav-search ">
+
+        <!-- Icon bên phải -->
+        <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-flex justify-content-end align-items-center">
+          <ul class="nav-icon d-flex justify-content-end align-items-center mb-0">
+            <li class="nav-search">
               <a href="#search" data-bs-toggle="modal" class="nav-modal-item">
                 <i class="icon-icon-loupe"></i>
               </a>
             </li>
             <li class="nav-toggle">
-              <a href="#toggle" data-bs-toggle="modal" class="nav-modal-item"><i class="icon-icon-toggle"></i></a>
+              <a href="#toggle" data-bs-toggle="modal" class="nav-modal-item ">
+                <i class="icon-icon-toggle"></i>
+              </a>
+            </li>
+            <li class="d-lg-none">
+              <a class="btn-mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">
+                <i class="icon-icon-toggle"></i>
+              </a>
             </li>
           </ul>
-        </div>
-        <!-- Nút mở menu mobile -->
-        <div class="mobileMenu d-lg-none">
-          <a class="btn btn-primary" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight">
-            <i class="icon-icon-toggle"></i>
-          </a>
+
         </div>
 
-
-      </div>
 
     </header>
+
     <!-- /header -->
     <!-- page tiltle -->
     <section class="tf-title-page">
@@ -112,9 +117,9 @@
             <h1>Blog Grid</h1>
           </div>
           <div class="eadcumb-list">
-            <a href="">Home</a>
+            <a href="" class="text-lg">Home</a>
             <i class="icon-icon-down_arrow-2"></i>
-            <p>Blog Grid</p>
+            <p class="text-lg">Blog Grid</p>
           </div>
         </div>
       </div>
@@ -123,11 +128,36 @@
     <!-- blog grid -->
     <section class="s-blog-grid sec-blog">
       <div class="container">
-        <div class="row ">
-          <div class="col-sm-12 col-md-6 col-xl-4">
+        <div class="row s-blog-list-grid-2">
+          <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="blog-item hover-img">
               <div class="entry_image">
-                <a href=""><img src="./images/container/img-container-1.png" alt=""></a>
+                <a href=""><img src="./images/container/img-container-1.png" alt="">
+                </a>
+
+              </div>
+              <div class="blog-content">
+                <p class="entry_sub text-sm text-main">
+                  PRECONSTRUCTIONS
+                </p>
+                <div class="entry_title d-block text-xl fw-medium link">
+                  <a href="">Turner Studying Effects of Rising
+                    Temperatures on Construction</a>
+                </div>
+                <ul class="entry-meta">
+                  <li class="entry_date text-sm">
+                    <p>Dec 28 2023</p>
+                  </li>
+                  <li class="br-line"><i class="icon-icon-ellipse"></i></li>
+                  <li class="entry_comment text-sx"><a href="">Comments (03)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class=" col-sm-12 col-md-6 col-lg-4">
+            <div class="blog-item hover-img">
+              <div class="entry_image">
+                <a href=""><img src="./images/container/img-container-2.png" alt=""></a>
               </div>
               <div class="blog-content">
                 <p class="entry_sub text-sm text-main">
@@ -147,17 +177,41 @@
 
             </div>
           </div>
-          <div class=" col-sm-12 col-md-6 col-xl-4">
+          <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="blog-item hover-img">
               <div class="entry_image">
-                <a href=""><img src="./images/container/img-container-1.png" alt=""></a>
+                <a href=""><img src="./images/container/img-container-3.png" alt=""></a>
               </div>
               <div class="blog-content">
                 <p class="entry_sub text-sm text-main">
-                  CONSTRUCTION MANAGERMANT
+                  PROJECT MANAGERMANT
                 </p>
                 <div class="entry_title d-block text-xl fw-medium link">
-                  <a href="">Turner Tops Out Healthcare Facility On Long Island</a>
+                  <a href="">Turner Co-Hosts Ethical Supply
+                    Chain Workshop</a>
+                </div>
+                <ul class="entry-meta">
+                  <li class="entry_date text-sm">
+                    <p>Dec 28 2023</p>
+                  </li>
+                  <li class="br-line"><i class="icon-icon-ellipse"></i></li>
+                  <li class="entry_comment text-sx"><a href="">Comments (03)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="blog-item hover-img">
+              <div class="entry_image">
+                <a href=""><img src="./images/container/img-container-4.png" alt=""></a>
+              </div>
+              <div class="blog-content">
+                <p class="entry_sub text-sm text-main">
+                  PRECONSTRUCTION
+                </p>
+                <div class="entry_title d-block text-xl fw-medium link">
+                  <a href="">Turner Studying Effects of Rising
+                    Temperatures on Construction</a>
                 </div>
                 <ul class="entry-meta">
                   <li class="entry_date text-sm">
@@ -170,10 +224,10 @@
 
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-xl-4   ">
+          <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="blog-item hover-img">
               <div class="entry_image">
-                <a href=""><img src="./images/container/img-container-1.png" alt=""></a>
+                <a href=""><img src="./images/container/img-container-5.png" alt=""></a>
               </div>
               <div class="blog-content">
                 <p class="entry_sub text-sm text-main">
@@ -181,6 +235,31 @@
                 </p>
                 <div class="entry_title d-block text-xl fw-medium link">
                   <a href="">Turner Tops Out Healthcare Facility On Long Island</a>
+                </div>
+                <ul class="entry-meta">
+                  <li class="entry_date text-sm">
+                    <p>Dec 28 2023</p>
+
+                  </li>
+                  <li class="br-line"><i class="icon-icon-ellipse"></i></li>
+                  <li class="entry_comment text-sx"><a href="">Comments (03)</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="blog-item hover-img">
+              <div class="entry_image">
+                <a href=""><img src="./images/container/img-container-6.png" alt=""></a>
+              </div>
+              <div class="blog-content">
+                <p class="entry_sub text-sm text-main">
+                  PROJECT MANAGERMANT
+                </p>
+                <div class="entry_title d-block text-xl fw-medium link">
+                  <a href="">Turner Co-Hosts Ethical Supply
+                    Chain Workshop</a>
                 </div>
                 <ul class="entry-meta">
                   <li class="entry_date text-sm">
@@ -193,92 +272,23 @@
 
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-xl-4    ">
-            <div class="blog-item hover-img">
-              <div class="entry_image">
-                <a href=""><img src="./images/container/img-container-1.png" alt=""></a>
-              </div>
-              <div class="blog-content">
-                <p class="entry_sub text-sm text-main">
-                  CONSTRUCTION MANAGERMANT
-                </p>
-                <div class="entry_title d-block text-xl fw-medium link">
-                  <a href="">Turner Tops Out Healthcare Facility On Long Island</a>
-                </div>
-                <ul class="entry-meta">
-                  <li class="entry_date text-sm">
-                    <p>Dec 28 2023</p>
-                  </li>
-                  <li class="br-line"><i class="icon-icon-ellipse"></i></li>
-                  <li class="entry_comment text-sx"><a href="">Comments (03)</a></li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-xl-4  ">
-            <div class="blog-item hover-img">
-              <div class="entry_image">
-                <a href=""><img src="./images/container/img-container-1.png" alt=""></a>
-              </div>
-              <div class="blog-content">
-                <p class="entry_sub text-sm text-main">
-                  CONSTRUCTION MANAGERMANT
-                </p>
-                <div class="entry_title d-block text-xl fw-medium link">
-                  <a href="">Turner Tops Out Healthcare Facility On Long Island</a>
-                </div>
-                <ul class="entry-meta">
-                  <li class="entry_date text-sm">
-                    <p>Dec 28 2023</p>
-                  </li>
-                  <li class="br-line"><i class="icon-icon-ellipse"></i></li>
-                  <li class="entry_comment text-sx"><a href="">Comments (03)</a></li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-xl-4 ">
-            <div class="blog-item hover-img">
-              <div class="entry_image">
-                <a href=""><img src="./images/container/img-container-1.png" alt=""></a>
-              </div>
-              <div class="blog-content">
-                <p class="entry_sub text-sm text-main">
-                  CONSTRUCTION MANAGERMANT
-                </p>
-                <div class="entry_title d-block text-xl fw-medium link">
-                  <a href="">Turner Tops Out Healthcare Facility On Long Island</a>
-                </div>
-                <ul class="entry-meta">
-                  <li class="entry_date text-sm">
-                    <p>Dec 28 2023</p>
-                  </li>
-                  <li class="br-line"><i class="icon-icon-ellipse"></i></li>
-                  <li class="entry_comment text-sx"><a href="">Comments (03)</a></li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
         </div>
         <ul class="wg-pagination">
           <li>
-            <a class="pagination-item"><i class="icon-icon-left"></i></a>
+            <a class="pagination-item"> <i class="icon-icon-provides"></i></a>
           </li>
           <li>
-            <a class="pagination-item">1</a>
+            <a class="pagination-item text-sm">1</a>
           </li>
           <li class="active">
-            <a class="pagination-item">2</a>
+            <a class="pagination-item text-sm">2</a>
           </li>
           <li>
-            <a class="pagination-item">3</a>
+
+            <a class="pagination-item text-sm">3</a>
           </li>
           <li>
-            <a class="pagination-item"><i class="icon-icon-right"></i></a>
+            <a class="pagination-item"> <i class="icon-icon-next-2"></i></a>
           </li>
         </ul>
       </div>
@@ -317,10 +327,11 @@
       <div class="footer-top">
         <div class="container">
           <div class="row-footer">
-            <div class="footer-col-block s1">
+            <div class=" s1">
+
               <div class="footer-heading footer-heading-mobile "><img src="./images/header/logo.svg" alt=""></div>
               <div class="tf-collapse-content">
-                <div class="footer-contract">
+                <div class="footer-contract text-lg-3">
                   <p>We Have Successfully Completed Projects In Numerous States Across The Continental United States.
                   </p>
                 </div>
@@ -332,7 +343,7 @@
                 <li><a href="#"><i class="icon-icon-prinset"></i></a></li>
               </ul>
             </div>
-            <div class="footer-col-block s2">
+            <div class="s2">
               <div class="footer-col-block inner-col">
                 <div class="footer-heading footer-heading-mobile text-xl-1 fw-medium">
                   ABOUT US
@@ -342,52 +353,59 @@
                     <div class="fonts-info text-lg-1">
                       <li class="item">
                         <span class="box-icon"> <i class="icon-icon-phone-2"></i></span>
-                        <a href="#">(+61) 3 8376 6284</a>
+                        <a href="#" class="box-icon-content text-lg-2 ">(+61) 3 8376 6284</a>
                       </li>
                       <li class="item"><span class="box-icon"><i class="icon-icon-email-2"> </i></span>
-                        <a href="#">info@website.com
-                          www.niconsconsruction.com
-                        </a>
+                        <div class="text-info">
+                          <a href="#" class="box-icon-content text-lg-2 " style="display: block;">info@website.com
+
+                          </a>
+
+                          <a href="#" class="box-icon-content text-lg-2 " style="display: block;">
+                            www.niconsconsruction.com
+                          </a>
+                        </div>
                       </li>
                       <li class="item">
                         <span class="box-icon"><i class="icon-icon-location"></i></span>
-                        <a href="#">2072 Pinnickinick Street, WA 98370</a>
+                        <p class="box-icon-p text-lg-3">2072 Pinnickinick Street, WA 98370</p>
                       </li>
                     </div>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="footer-col-block s3">
+            <div class=" s2">
               <div class="footer-col-block inner-col">
                 <div class="footer-heading footer-heading-mobile text-xl-1 fw-medium">QUICK LINKS</div>
-                <div class="tf-collapse-content text-lg-1">
+                <div class="tf-collapse-content ">
                   <ul class="footer-menu-list">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Misson & Visson</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#" class="quick-links-content text-lg-1">About Us</a></li>
+                    <li><a href="#" class="quick-links-content text-lg-1">Misson & Visson</a></li>
+                    <li><a href="#" class="quick-links-content text-lg-1">Our Services</a></li>
+                    <li><a href="#" class="quick-links-content text-lg-1">Contact Us</a></li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="footer-col-block s4">
+            <div class=" s4">
               <div class="footer-col-block inner-col">
                 <div class="footer-heading footer-heading-mobile text-xl-1 fw-medium">NEWSLETER</div>
                 <div class="tf-collapse-content">
                   <ul class="footer-menu-list">
-                    <li class="tele ">
-                      <p>Get & New Update</p>
+                    <li class="tele">
+                      <p class="text-md">Get & New Update</p>
                       <a href="#"><i class="icon-icon-telegram"></i></a>
                     </li>
-                    <li class="pick  text-sm-1">
-                      <input type="checkbox" name="" id="">
-                      <p>I agree to all terms and policies</p>
+                    <li class="pick">
+                      <span class="tick"></span>
+                      <p class="text-sm-1">I agree to all terms and policies</p>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -398,11 +416,11 @@
               Themesflat. All Rights
               Reserved</p>
             <ul class="text text-sx justify-content-end">
-              <li class="item"><a href="">Sitemap</a></li>
+              <li class="text-item"><a href="">Sitemap</a></li>
               <span class="icon-dot"></span>
-              <li class="item"><a href="">Terms of Services</a></li>
+              <li class="text-item"><a href="">Terms of Services</a></li>
               <span class="icon-dot"></span>
-              <li class="item"><a href=""> Privacy Policy</a></li>
+              <li class="text-item"><a href=""> Privacy Policy</a></li>
             </ul>
           </div>
         </div>
@@ -421,7 +439,8 @@
           <div class="mb-content-top">
             <ul class="mav-ul-mb" id="wrapper-menu-navigation">
               <li class="nav-mb-item ">
-                <a href="#dropdown-menu-1" class="mb-menu-link text-xl-1" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dropdown-menu-1">
+                <a href="#dropdown-menu-1" class="mb-menu-link text-xl-1" data-bs-toggle="collapse" aria-expanded="true"
+                  aria-controls="dropdown-menu-1">
                   <span>Home</span>
                 </a>
                 <div class="collapse show" id="dropdown-menu-1">
@@ -454,11 +473,36 @@
               <li class="nav-mb-item"><a href="#" class="mb-menu-link text-xl-1"><span>Contact Us</span></a></li>
             </ul>
           </div>
-          <div class="mb-other-content"></div>
+          <div class="mb-other-content">
+            <div class="group-icon">
+              <p>dsdsds</p>
+              <a href="" class="site-nav-icon"><i class="icon-icon-user"></i></a>
+            </div>
+            <div class="mb-notice"></div>
+            <div class="mb-contact"></div>
+            <div class="mb-info"></div>
+          </div>
+        </div>
+        <div class="mb-botoom">
+          <div class="botoom-bar">
+            <div class="tf-currencies">
+
+            </div>
+            <div class="tf-languages">
+              
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!-- mobile toggle -->
+    <!-- scroll top -->
+    <button id="goTop" class="showw">
+      <div class="boder-process"></div>
+      <div class="iconn"><i class="icon-icon-right"></i></div>
+
+    </button>
+    <!-- / scroll top -->
 
   </div>
 
