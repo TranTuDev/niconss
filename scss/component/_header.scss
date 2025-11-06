@@ -1,8 +1,16 @@
 @use "../abstracts/index" as *;
 
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
 .header-default {
   border-bottom: 1px solid var(--rgba-dark-1);
-  overflow: hidden;
+
+
 
 
   .box-nav-menu {
@@ -23,10 +31,10 @@
     }
 
     .menu-item {
-      padding: 33px 20px;
+      padding: 33.5px 20px;
       justify-content: center;
       align-items: center;
-      
+
 
       &:hover {
         background-color: var(--rgba-dark-7);
@@ -47,6 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    max-width: 100%;
 
     li {
       list-style: none;
@@ -58,7 +67,7 @@
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        color: #fff;
+        color: var(--primary);
         transition: 0.3s ease;
 
         i {
@@ -73,15 +82,16 @@
       .btn {
         padding: 8px 12px;
         border-radius: 6px;
-        background-color: #007bff; // hoặc màu chính của theme
+        background-color: #007bff;
 
         i {
           font-size: 20px;
-          color: #fff;
+          color: var(--primary);
         }
       }
     }
   }
+
 
   .nav-search a {
     text-decoration: none;
@@ -117,7 +127,8 @@
   }
 
 }
-.btn{
+
+.btn {
   background-color: non;
 }
 
@@ -141,93 +152,94 @@ header {
 
 
 /* ===== MENU CẤP 2 ===== */
-.box-nav-menu .sub-menu {
-  pointer-events: none;
+/* MENU CHA (Blog) */
+.menu-item {
+  position: relative;
+
+  /* Hover mở cấp 2 */
+  &:hover>.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+/* CẤP 2 */
+.sub-menu {
   position: absolute;
-  background-color: var(--primary);
-  z-index: 999;
-  text-align: left;
   top: 100%;
   left: 0;
+  width: 350px;
+  height: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 10px;
   opacity: 0;
   visibility: hidden;
-  border-radius: 15px;
   transform: translateY(10px);
-  transition: all 0.3s ease;
-  padding: 20px;
-  width: 200px;
-}
-
-.box-nav-menu .menu-item:hover>.sub-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* ===== MENU CẤP 3 ===== */
-.sub-menu .menu-list {
-  position: relative;
-}
-
-/* menu cấp 3 ẩn */
-.sub-menu .menu-list li .sub-menu-1 {
+  transition: 0.25s ease;
   pointer-events: none;
-  position: absolute;
-  background-color: var(--primary);
-  z-index: 999;
-  text-align: left;
-  top: 0;
-  left: 110%;
-  opacity: 0;
-  visibility: hidden;
-  border-radius: 15px;
-  transform: translateX(10px);
-  transition: all 0.3s ease;
-  padding: 20px;
-  width: 200px;
-}
-
-/* hiện menu cấp 3 khi hover vào li cha */
-.sub-menu .menu-list li:hover>.sub-menu-1 {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
-  pointer-events: auto;
-}
-
-.nav-icon {
+  z-index: 2000;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
   gap: 20px;
+}
 
-  li {
-    list-style: none;
-    display: flex;
-    align-items: center;
 
-    a {
-      text-decoration: none;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+.menu-heading {
+  font-weight: bold;
+  font-size: 18px;
+  padding-right: 27px;
+  
+}
 
-      i {
-        font-size: 22px;
-      }
-    }
-  }
+.menu-list {
+  flex-direction: column;
+  gap: 12px;
 
-  .btn {
-    background-color: var(--primary-2);
-    padding: 8px 12px;
-    border-radius: 8px;
+  a {
+    text-decoration: none !important;
 
-    i {
-      color: #fff;
-      font-size: 22px;
+    &:hover {
+      color: var(--primary-2);
     }
   }
 }
+
+// .menu-list li {
+//   margin: 0;                     
+// }
+
+// /* ITEM CẤP 2 HOVER → mở cấp 3 */
+// .sub-menu li:hover > .sub-menu-1 {
+//   opacity: 1;
+//   visibility: visible;
+//   transform: translateX(0);
+//   pointer-events: auto;
+// }
+
+// /* CẤP 3 (nằm ngang kế bên cấp 2) */
+// .sub-menu-1 {
+//   position: absolute;
+//   top: 0;
+//   left: 100%;
+//   min-width: 200px;
+//   background: #fff;
+//   border-radius: 10px;
+//   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+//   padding: 15px;
+
+//   opacity: 0;
+//   visibility: hidden;
+//   transform: translateX(10px);
+//   transition: 0.25s ease;
+//   pointer-events: none;
+//   z-index: 2001;
+// }
+
+// /* BẮT BUỘC – tạo stacking context cao hơn page-title */
+// .box-navigation {
+//   position: relative;
+//   z-index: 3000;
+// }

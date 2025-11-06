@@ -1,0 +1,62 @@
+@use "../abstracts/index" as *;
+
+.iconn {
+    transform: rotate(-90deg)
+}
+
+#goTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+  /* biến mặc định */
+  --progress-angle: 0deg;
+
+  &.showw {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  .iconn {
+    position: absolute;
+    font-size: 18px;
+    color: #faf0f0 !important;
+    background: #7cfff4 !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transform: rotate(-90deg);
+  }
+
+  .border-progress {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid rgb(255, 255, 255);
+
+    /* hiệu ứng vòng tiến độ */
+    mask: conic-gradient(#ffffff var(--progress-angle, 0deg), transparent 0deg);
+    -webkit-mask: conic-gradient(#ffffff var(--progress-angle, 0deg), transparent 0deg);
+    background: conic-gradient(var(--progress-color, #fcf9f9) var(--progress-angle, 0deg), transparent 0deg);
+    transition: background 0.2s linear;
+  }
+}

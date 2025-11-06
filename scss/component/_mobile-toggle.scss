@@ -2,23 +2,20 @@
 
 /* ==================== MOBILE MENU ==================== */
 
-// .canvas-mb {
-//     width: 100% !important;
-//     max-width: min(90%, 320px);
-//     border-right: 0 !important;
-//     font-family: "Poppins", sans-serif;
-// }
-// .offcanvas{
-//   width: ;
-// }
-
-.offcanvas-end{
-  width: 70% !important;
+.offcanvas {
   height: 100%;
-  background-color: var(--white);
+  background-color: var(--primary);
+  justify-content: center;
+  margin-right: -80px
 }
-.mb-canvas-content {
-  padding: 1rem;
+
+.accordion {
+  border-color: var(--primary) !important;
+}
+
+.offcanvas-header {
+  margin-right: 95px;
+
 }
 
 .mav-ul-mb {
@@ -57,61 +54,165 @@
   transform: rotate(180deg);
 }
 
-.site-nav-icon i{
-  background-color: var(--yellow);
-  color: var(--primary-2);
+.mb-other-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 0px;
+}
+
+.mb-content-top {
+  border: none;
+
+}
+
+.mb-notice {
+  font-weight: bold;
 }
 
 
+.site-nav-icon {
+  background-color: var(--primary-2);
+  padding: 0px 10px;
+  gap: 10px;
+  margin-right: 400px;
+  line-height: 40px;
+  color: var(--dark);
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
 
+  i {
+    color: var(--primary);
+    font-size: 10px;
+  }
 
-/* ========== SUB MENU ========== */
-.sub-nav-menu {
-  list-style: none;
-  padding-left: 10px;
-  margin: 0;
-  display: none;
-}
-
-.sub-nav-link {
-  display: block;
-  padding: 8px 0;
-  color: var(--primary-1);
-  // font-size: 15px;
-  text-decoration: none;
-  font-family: $font-main;
-
-  &:hover {
-    color: var(--yellow);
+  p {
+    color: var(--primary);
   }
 }
 
-// /* hiệu ứng trượt */
-.sub-nav-menu.show {
-  display: block;
-  animation: slideDown 0.25s ease;
+// .mb-info {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 5px;
+// }
+
+
+.canvas-mb .mb-canvas-content {
+  width: 100%;
+  max-width: min(90%, 320px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  isolation: isolate;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
+.canvas-mb .mb-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px;
+  box-sizing: border-box;
 }
 
 
 
+/* ========== SUB MENU 2,3 ========== */
+
+/* ----- Reset cơ bản ----- */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- Submenu cấp 1, 2, 3 ----- */
+.submenu-level-1,
+.submenu-level-2,
+.submenu-level-3 {
+  padding-left: 1rem;
+
+  li {
+    position: relative;
+    margin: 6px 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    i.icon-arrow {
+      transition: transform 0.3s ease;
+      font-style: normal;
+      margin-left: 6px;
+    }
+  }
+}
+
+/* ----- Ẩn submenu con ----- */
+.submenu-level-2,
+.submenu-level-3 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  border-left: 1px solid #ddd;
+  margin-left: 0.5rem;
+
+  &.open {
+    max-height: 500px;
+  }
+}
+
+/* ----- Khi toggle mở submenu ----- */
+.submenu-toggle.active i.icon-arrow {
+  transform: rotate(90deg);
+}
+
+/* Optional: style cho icon mũi tên */
+.icon-arrow::before {
+  content: "+";
+  font-size: 14px;
+  color: #666;
+}
+
+
+// hiệu ứng cho nút đang mở submenu
+.submenu-toggle.active {
+  font-weight: 600;
+  color: #000;
+}
 
 
 /* ẨN NÚT MOBILE MENU MẶC ĐỊNH */
-#mobileMenu .btn.btn-primary {
-  display: none;
-}
+// #mobileMenu .btn.btn-primary {
+//   display: none;
+// }
 
 /* ----------- DESKTOP (≥992px) ----------- */
 @media (min-width: 992px) {
+
   /* Ẩn nút mobile menu */
   #mobileMenu .btn.btn-primary {
     display: none;
   }
+
   /* Hiện toggle trong nav chính */
   .nav-toggle {
     display: block !important;
@@ -120,23 +221,7 @@
 
 /* ----------- MOBILE (≤991px) ----------- */
 @media (max-width: 991px) {
-  /* Ẩn toggle trong nav chính */
   .nav-toggle {
     display: none !important;
-  }
-
-  /* Hiện nút mobile menu */
-  #mobileMenu .btn.btn-primary {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background-color: transparent; /* theo thiết kế nếu muốn icon trần */
-    font-size: 22px;
-  }
-
-  /* Giữ lại nav-search */
-  .nav-search {
-    display: inline-block !important;
   }
 }

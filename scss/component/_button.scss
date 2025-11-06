@@ -1,15 +1,78 @@
 @use "../abstracts/index" as *;
-.showw{
+
+.showw {
     background-color: var(--rgba-dark-7);
-    border:1px solid var(--rgba-dark) !important;
+    border: 1px solid var(--rgba-dark) !important;
     justify-content: center;
     align-items: center;
     display: flex;
 }
-.iconn {
-    transform: rotate(-90deg)
-    
+
+.btn-mobile {
+    padding-right: 20px;
 }
-.btn-mobile{
-    padding-right:20px ;
+
+.btn-title-page {
+    padding: 18px 20px;
+    background-color: var(--primary-2);
+    display: flex;
+    align-items: center;
+    width: fit-content;
+
+    i {
+        margin-left: 30px;
+        font-size: 20px;
+
+    }
+
+}
+
+.btn-title-page-service {
+     padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    color: var(--dark-12) !important;
+    border-bottom:1px solid ;
+    margin-top: 83px;
+    &:hover {
+        color: var(--primary-2) !important;
+    }
+
+    i {
+        margin-left: 30px;
+        font-size: 20px;
+
+    }
+
+}
+
+.btn-video-title-page {
+    padding: 20px 20px !important;
+    background-color: var(--rgba-dark-9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px !important;
+    border: 0px solid !important;
+
+    i {
+        color: var(--primary);
+
+    }
+}
+
+
+
+.btn-dot {
+    margin-top: 13px;
+    padding: 27px 27px !important;
+    border: 1px solid var(--rgba-dark-9) !important;
+    margin-left: -85px;
+    position: sticky;
+    display: flex;
+}
+
+.btn-icon-list {
+    margin-top: 39px;
 }

@@ -1,46 +1,10 @@
 
-const link = document.createElement("link");
-link.rel = "stylesheet";
-link.href = "../../fonts/fonts-icons.css"; 
-document.head.appendChild(link);
-
-document.addEventListener("DOMContentLoaded", () => {
-  const menuLinks = document.querySelectorAll(".mb-menu-link");
-
-  menuLinks.forEach((link) => {
-    const parentItem = link.closest(".nav-mb-item");
-    const subMenu = parentItem.querySelector(".sub-nav-menu");
-
-    if (subMenu) {
-      // có sub menu -> thêm class để click toggle
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        // đóng tất cả menu khác
-        document.querySelectorAll(".nav-mb-item.open").forEach((item) => {
-          if (item !== parentItem) {
-            item.classList.remove("open");
-            const sm = item.querySelector(".sub-nav-menu");
-            if (sm) sm.classList.remove("show");
-          }
-        });
-        // toggle menu hiện tại
-        parentItem.classList.toggle("open");
-        subMenu.classList.toggle("show");
-      });
-    }
-  });
-});
-
 
 document.querySelectorAll('.pick').forEach(item => {
   item.addEventListener('click', () => {
     item.querySelector('.tick').classList.toggle('active');
   });
 });
-
-
-
 
 
 
@@ -81,3 +45,44 @@ document.querySelectorAll('.entry_image').forEach(entry => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggles = document.querySelectorAll(".submenu-toggle");
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener("click", e => {
+      e.preventDefault();
+
+      const parent = toggle.closest(".submenu-item");
+      const submenu = parent.querySelector("ul");
+
+      // Đóng các submenu khác cùng cấp
+      const siblingSubmenus = parent.parentElement.querySelectorAll(".submenu-item > ul.open");
+      siblingSubmenus.forEach(sib => {
+        if (sib !== submenu) {
+          sib.classList.remove("open");
+          sib.previousElementSibling?.classList.remove("active");
+        }
+      });
+
+      // Toggle submenu hiện tại
+      if (submenu) {
+        submenu.classList.toggle("open");
+        toggle.classList.toggle("active");
+      }
+    });
+  });
+});
+
+
+document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', () => {
+        setTimeout(() => {
+            const icon = button.querySelector('.toggle-iconn');
+            if (button.classList.contains('collapsed')) {
+                icon.textContent = '+';
+            } else {
+                icon.textContent = '−';
+            }
+        }, 300); // chờ hiệu ứng collapse hoàn tất
+    });
+});
