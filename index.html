@@ -10,11 +10,58 @@
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            /* đẩy icon sang phải */
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            /* nền trắng hoặc tùy màu */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            /* đổ bóng nhẹ */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header i.icon-icon-date {
+            font-size: 22px;
+            /* kích thước icon */
+            color: #333;
+            /* màu cơ bản */
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            padding: 10px;
+            transition: all 0.25s ease;
+        }
+
+        .header i.icon-icon-date:hover {
+            color: #fff;
+            background-color: #007bff;
+            /* màu hover xanh dương */
+            transform: scale(1.1);
+            /* phóng nhẹ */
+            box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+        }
+
+        .header i.icon-icon-date:active {
+            transform: scale(0.95);
+            /* nhấn vào thì nhỏ lại tí */
+        }
+    </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="header">
+        <div class="header ">
+            <div class="">
+                <i class="icon-icon-date" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight" style="cursor: pointer;">
+                </i>
+            </div>
 
         </div>
         <div class="content">
